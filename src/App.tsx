@@ -89,13 +89,13 @@ const SecondSection = styled.section`
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color-white);
-	h3 {
+	h1 {
 		font-weight: 700;
 		font-size: 14px;
 		letter-spacing: 0.1em;
 		color: var(--color-gray);
 	}
-	h1 {
+	h3 {
 		font-weight: 700;
 		font-size: 46px;
 		line-height: 65px;
@@ -118,11 +118,13 @@ const VideoSection = styled.section`
 	width: 100%;
 	height: 679px;
 	background-color: var(--color-black);
+`;
+
+const VideoContainer = styled.div`
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	gap: 40px;
-	padding: 40px;
+	margin-top: 100px;
 `;
 
 const VideonWrapper = styled.div`
@@ -154,20 +156,20 @@ const VideoDescription = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	h3 {
+	h1 {
 		font-weight: 700;
 		font-size: 14px;
 		letter-spacing: 0.1em;
 		color: var(--color-gray);
 	}
-	h1 {
+	h3 {
 		font-weight: 700;
 		font-size: 46px;
 		line-height: 65px;
 		color: var(--color-white);
 	}
 	ul {
-		line-height: 20px;
+		line-height: 24px;
 		color: var(--color-white);
 		list-style: inside;
 	}
@@ -212,8 +214,8 @@ function App() {
 				</BannerWrapper>
 			</ParallaxBanner>
 			<SecondSection>
-				<h3>FEATURES</h3>
-				<h1>Lower price, higher performance</h1>
+				<h1>FEATURES</h1>
+				<h3>Lower price, higher performance</h3>
 				<AccordionWrapper>
 					<StructureImage
 						src='src/assets/images/structure.jpeg'
@@ -223,36 +225,38 @@ function App() {
 				</AccordionWrapper>
 			</SecondSection>
 			<VideoSection>
-				<VideoDescription>
-					<h3>INSTALLATION EXAMPLES</h3>
-					<h1>
-						Pororo Theme Park
-						<br />
-						40-meter ultra-large
-						<br />
-						screen
-					</h1>
-					<ul>
-						<li>Product: M4</li>
-						<li>Pixel Pitch: 2.5mm 3.0mm</li>
-						<li>Screen size: 41 x 3 m</li>
-					</ul>
-				</VideoDescription>
-				<VideonWrapper>
-					<Video
-						ref={videoRef}
-						src='src/assets/videos/Pororo-Kids-Park.mp4'
-						controls
-						preload='metadata'
-						onPlay={handleVideoPlay}
-						onPause={handleVideoPause}
-					/>
-					{!isPlaying && (
-						<PlayButton onClick={handlePlay}>
-							<img src='src/assets/images/start.png' alt='play' />
-						</PlayButton>
-					)}
-				</VideonWrapper>
+				<VideoContainer>
+					<VideoDescription>
+						<h1>INSTALLATION EXAMPLES</h1>
+						<h3>
+							Pororo Theme Park
+							<br />
+							40-meter ultra-large
+							<br />
+							screen
+						</h3>
+						<ul>
+							<li>Product: M4</li>
+							<li>Pixel Pitch: 2.5mm 3.0mm</li>
+							<li>Screen size: 41 x 3 m</li>
+						</ul>
+					</VideoDescription>
+					<VideonWrapper>
+						<Video
+							ref={videoRef}
+							src='src/assets/videos/Pororo-Kids-Park.mp4'
+							controls
+							preload='metadata'
+							onPlay={handleVideoPlay}
+							onPause={handleVideoPause}
+						/>
+						{!isPlaying && (
+							<PlayButton onClick={handlePlay}>
+								<img src='src/assets/images/start.png' alt='play' />
+							</PlayButton>
+						)}
+					</VideonWrapper>
+				</VideoContainer>
 			</VideoSection>
 		</Container>
 	);
