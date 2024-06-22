@@ -10,7 +10,7 @@ const ParallaxBanner = styled.div`
 	justify-content: center;
 	width: 100%;
 	height: calc(100vh - 104px);
-	background-image: url('src/assets/images/main_bg.jpeg');
+	background-image: url('./src/assets/images/main_bg.jpeg');
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -218,7 +218,7 @@ function App() {
 				<h3>Lower price, higher performance</h3>
 				<AccordionWrapper>
 					<StructureImage
-						src='src/assets/images/structure.jpeg'
+						src='./src/assets/images/structure.jpeg'
 						alt='structure'
 					/>
 					<Accordion />
@@ -244,7 +244,7 @@ function App() {
 					<VideonWrapper>
 						<Video
 							ref={videoRef}
-							src='src/assets/videos/Pororo-Kids-Park.mp4'
+							src='./src/assets/videos/Pororo-Kids-Park.mp4'
 							controls
 							preload='metadata'
 							onPlay={handleVideoPlay}
@@ -252,7 +252,7 @@ function App() {
 						/>
 						{!isPlaying && (
 							<PlayButton onClick={handlePlay}>
-								<img src='src/assets/images/start.png' alt='play' />
+								<img src='./src/assets/images/start.png' alt='play' />
 							</PlayButton>
 						)}
 					</VideonWrapper>
