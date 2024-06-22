@@ -1,4 +1,4 @@
 export type TButton = {
-	variants: 'blank' | 'filled';
+	variants?: 'blank' | 'filled';
 	children: React.ReactNode;
 };

@@ -76,7 +76,7 @@ export default function Header() {
 			<SearchWrapper>
 				<SearchIcon src='./images/search.png' alt='search' />
 				<div style={{ width: '169px', height: '46px' }}>
-					<Button variants='filled'>CONTACT US</Button>
+					<Button>CONTACT US</Button>
 				</div>
 			</SearchWrapper>
 		</Container>

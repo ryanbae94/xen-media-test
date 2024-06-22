@@ -1,21 +1,25 @@
 import { TButton } from '../../../types/Tbutton';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const Container = styled.button<TButton>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-	background-color: ${(props) =>
-		props.variants === 'filled' ? 'var(--color-red)' : 'var(--color-white)'};
-	color: ${(props) =>
-		props.variants === 'filled' ? 'var(--color-white)' : 'var(--color-red)'};
+	background-color: var(--color-red);
+	color: var(--color-white);
 	border: 1px solid var(--color-red);
 	width: 100%;
 	height: 100%;
 	border-radius: 24px;
 	font-family: inherit;
 	cursor: pointer;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: var(--color-white);
+		color: var(--color-red);
+	}
 `;
 
 const Contents = styled.span`
@@ -25,23 +29,25 @@ const Contents = styled.span`
 	letter-spacing: 0.05em;
 `;
 
-const Arrow = styled.img`
+const Arrow = styled.img<{ isHovered: boolean }>`
 	width: 10px;
 	height: 10px;
+	${({ isHovered }) =>
+		isHovered
+			? 'content: url(./images/arrow_red.png)'
+			: 'content: url(./images/arrow_white.png)'}
 `;
 
-export default function Button({ variants, children }: TButton) {
+export default function Button({ children }: TButton) {
+	const [isHovered, setIsHovered] = useState(false);
+
 	return (
-		<Container variants={variants}>
+		<Container
+			onMouseEnter={() => setIsHovered(true)}
+			onMouseLeave={() => setIsHovered(false)}
+		>
 			<Contents>{children}</Contents>
-			<Arrow
-				src={
-					variants === 'filled'
-						? './images/arrow_white.png'
-						: './images/arrow_red.png'
-				}
-				alt='arrow'
-			/>
+			<Arrow src='./images/arrow_white.png' alt='arrow' isHovered={isHovered} />
 		</Container>
 	);
 }
