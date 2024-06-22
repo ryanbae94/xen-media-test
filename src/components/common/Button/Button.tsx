@@ -37,8 +37,8 @@ export default function Button({ variants, children }: TButton) {
 			<Arrow
 				src={
 					variants === 'filled'
-						? './src/assets/images/arrow_white.png'
-						: './src/assets/images/arrow_red.png'
+						? './images/arrow_white.png'
+						: './images/arrow_red.png'
 				}
 				alt='arrow'
 			/>
