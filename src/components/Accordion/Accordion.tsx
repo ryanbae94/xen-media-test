@@ -77,6 +77,7 @@ const DescriptionWrapper = styled.div<{ isOpen: boolean }>`
 	overflow: hidden;
 	transition: max-height 0.5s ease, opacity 0.5s ease;
 	p {
+		color: var(--color-black);
 		font-size: 16px;
 		padding: 20px 10px;
 		line-height: 1.5;

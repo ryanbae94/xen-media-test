@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header/Header';
+import Accordion from './components/Accordion/Accordion';
 
 const ParallaxBanner = styled.div`
 	position: relative;
@@ -76,8 +77,41 @@ const Container = styled.div`
 	align-items: center;
 	width: 100%;
 	max-width: 1728px;
-	height: 4000px;
 	margin: 0 auto;
+`;
+
+const SecondSection = styled.section`
+	width: 100%;
+	height: 863px;
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-white);
+	h3 {
+		font-weight: 700;
+		font-size: 14px;
+		letter-spacing: 0.1em;
+		color: var(--color-gray);
+	}
+	h1 {
+		font-weight: 700;
+		font-size: 46px;
+		line-height: 65px;
+		color: var(--color-black);
+	}
+`;
+
+const AccordionWrapper = styled.div`
+	display: flex;
+	margin-top: 20px;
+	gap: 40px;
+`;
+
+const StructureImage = styled.img`
+	width: 685px;
+	height: 509px;
 `;
 
 function App() {
@@ -96,6 +130,14 @@ function App() {
 					</DescriptionWrapper>
 				</BannerWrapper>
 			</ParallaxBanner>
+			<SecondSection>
+				<h3>FEATURES</h3>
+				<h1>Lower price, higher performance</h1>
+				<AccordionWrapper>
+					<StructureImage src='src/assets/structure.jpeg' />
+					<Accordion />
+				</AccordionWrapper>
+			</SecondSection>
 		</Container>
 	);
 }
