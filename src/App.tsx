@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header/Header';
 import Accordion from './components/Accordion/Accordion';
+import { useRef, useState } from 'react';
 
 const ParallaxBanner = styled.div`
 	position: relative;
@@ -114,7 +115,88 @@ const StructureImage = styled.img`
 	height: 509px;
 `;
 
+const VideoSection = styled.section`
+	width: 100%;
+	height: 679px;
+	background-color: var(--color-black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	padding: 40px;
+`;
+
+const VideonWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 853px;
+	height: 479px;
+	position: relative;
+`;
+
+const Video = styled.video`
+	width: 100%;
+	height: 100%;
+`;
+
+const PlayButton = styled.button`
+	position: absolute;
+	background: none;
+	border: none;
+	cursor: pointer;
+	img {
+		width: 112px;
+		height: 112px;
+	}
+`;
+
+const VideoDescription = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	h3 {
+		font-weight: 700;
+		font-size: 14px;
+		letter-spacing: 0.1em;
+		color: var(--color-gray);
+	}
+	h1 {
+		font-weight: 700;
+		font-size: 46px;
+		line-height: 65px;
+		color: var(--color-white);
+	}
+	ul {
+		line-height: 20px;
+		color: var(--color-white);
+		list-style: inside;
+	}
+`;
+
 function App() {
+	const videoRef = useRef<HTMLVideoElement>(null);
+	const [isPlaying, setIsPlaying] = useState(false);
+
+	const handlePlay = () => {
+		if (videoRef.current) {
+			if (isPlaying) {
+				videoRef.current.pause();
+			} else {
+				videoRef.current.play();
+			}
+			setIsPlaying(!isPlaying);
+		}
+	};
+
+	const handleVideoPlay = () => {
+		setIsPlaying(true);
+	};
+
+	const handleVideoPause = () => {
+		setIsPlaying(false);
+	};
+
 	return (
 		<Container>
 			<Header />
@@ -134,10 +216,42 @@ function App() {
 				<h3>FEATURES</h3>
 				<h1>Lower price, higher performance</h1>
 				<AccordionWrapper>
-					<StructureImage src='src/assets/structure.jpeg' />
+					<StructureImage src='src/assets/structure.jpeg' alt='structure' />
 					<Accordion />
 				</AccordionWrapper>
 			</SecondSection>
+			<VideoSection>
+				<VideoDescription>
+					<h3>INSTALLATION EXAMPLES</h3>
+					<h1>
+						Pororo Theme Park
+						<br />
+						40-meter ultra-large
+						<br />
+						screen
+					</h1>
+					<ul>
+						<li>Product: M4</li>
+						<li>Pixel Pitch: 2.5mm 3.0mm</li>
+						<li>Screen size: 41 x 3 m</li>
+					</ul>
+				</VideoDescription>
+				<VideonWrapper>
+					<Video
+						ref={videoRef}
+						src='src/assets/Pororo-Kids-Park.mp4'
+						controls
+						preload='metadata'
+						onPlay={handleVideoPlay}
+						onPause={handleVideoPause}
+					/>
+					{!isPlaying && (
+						<PlayButton onClick={handlePlay}>
+							<img src='src/assets/start.png' alt='play' />
+						</PlayButton>
+					)}
+				</VideonWrapper>
+			</VideoSection>
 		</Container>
 	);
 }
