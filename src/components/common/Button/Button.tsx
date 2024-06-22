@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TButton } from '../../types/Tbutton';
+import { TButton } from '../../../types/Tbutton';
 import styled from 'styled-components';
 
 const Container = styled.button<TButton>`
@@ -39,8 +39,8 @@ export default function Button({ variants, children }: TButton) {
 			<Arrow
 				src={
 					variants === 'filled'
-						? 'src/assets/arrow_white.png'
-						: 'src/assets/arrow_red.png'
+						? 'src/assets/images/arrow_white.png'
+						: 'src/assets/images/arrow_red.png'
 				}
 				alt='arrow'
 			/>

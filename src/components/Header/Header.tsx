@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../Button/Button';
+import Button from '../common/Button/Button';
 
 const Container = styled.header`
 	position: fixed;
@@ -60,22 +60,22 @@ const SearchIcon = styled.img`
 export default function Header() {
 	return (
 		<Container>
-			<Logo src='src/assets/logo.png' alt='logo' />
+			<Logo src='src/assets/images/logo.png' alt='logo' />
 			<Contents>
 				<span>HOME</span>
 				<span>PRODUCTS</span>
 				<ArrowContentsBox>
 					<span>CAPABILITIES</span>
-					<ArrowIcon src='src/assets/small_arrow_down.png' alt='arrow' />
+					<ArrowIcon src='src/assets/images/small_arrow_down.png' alt='arrow' />
 				</ArrowContentsBox>
 				<ArrowContentsBox>
 					<span>INDUSTRIES</span>
-					<ArrowIcon src='src/assets/small_arrow_down.png' alt='arrow' />
+					<ArrowIcon src='src/assets/images/small_arrow_down.png' alt='arrow' />
 				</ArrowContentsBox>
 				<span>COMPANY</span>
 			</Contents>
 			<SearchWrapper>
-				<SearchIcon src='src/assets/search.png' alt='search' />
+				<SearchIcon src='src/assets/images/search.png' alt='search' />
 				<div style={{ width: '169px', height: '46px' }}>
 					<Button variants='filled'>CONTACT US</Button>
 				</div>

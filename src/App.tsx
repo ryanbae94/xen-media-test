@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import './App.css';
 import Header from './components/Header/Header';
 import Accordion from './components/Accordion/Accordion';
 import { useRef, useState } from 'react';
@@ -11,7 +10,7 @@ const ParallaxBanner = styled.div`
 	justify-content: center;
 	width: 100%;
 	height: calc(100vh - 104px);
-	background-image: url('src/assets/main_bg.jpeg');
+	background-image: url('src/assets/images/main_bg.jpeg');
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -216,7 +215,10 @@ function App() {
 				<h3>FEATURES</h3>
 				<h1>Lower price, higher performance</h1>
 				<AccordionWrapper>
-					<StructureImage src='src/assets/structure.jpeg' alt='structure' />
+					<StructureImage
+						src='src/assets/images/structure.jpeg'
+						alt='structure'
+					/>
 					<Accordion />
 				</AccordionWrapper>
 			</SecondSection>
@@ -239,7 +241,7 @@ function App() {
 				<VideonWrapper>
 					<Video
 						ref={videoRef}
-						src='src/assets/Pororo-Kids-Park.mp4'
+						src='src/assets/videos/Pororo-Kids-Park.mp4'
 						controls
 						preload='metadata'
 						onPlay={handleVideoPlay}
@@ -247,7 +249,7 @@ function App() {
 					/>
 					{!isPlaying && (
 						<PlayButton onClick={handlePlay}>
-							<img src='src/assets/start.png' alt='play' />
+							<img src='src/assets/images/start.png' alt='play' />
 						</PlayButton>
 					)}
 				</VideonWrapper>
