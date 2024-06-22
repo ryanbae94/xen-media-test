@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { TButton } from '../../../types/Tbutton';
 import styled from 'styled-components';
 
