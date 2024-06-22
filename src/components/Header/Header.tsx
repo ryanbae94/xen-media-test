@@ -66,11 +66,11 @@ export default function Header() {
 				<span>PRODUCTS</span>
 				<ArrowContentsBox>
 					<span>CAPABILITIES</span>
-					<ArrowIcon src='src/assets/arrow_down.png' alt='arrow' />
+					<ArrowIcon src='src/assets/small_arrow_down.png' alt='arrow' />
 				</ArrowContentsBox>
 				<ArrowContentsBox>
 					<span>INDUSTRIES</span>
-					<ArrowIcon src='src/assets/arrow_down.png' alt='arrow' />
+					<ArrowIcon src='src/assets/small_arrow_down.png' alt='arrow' />
 				</ArrowContentsBox>
 				<span>COMPANY</span>
 			</Contents>
