@@ -16,6 +16,7 @@ const Container = styled.header`
 	padding: 0 164px;
 	margin: 0 auto;
 	z-index: 100;
+	background-color: var(--color-white);
 `;
 
 const Logo = styled.img`
