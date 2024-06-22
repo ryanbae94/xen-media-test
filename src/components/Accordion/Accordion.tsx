@@ -62,6 +62,7 @@ const ContentsWrapper = styled.div`
 	width: 100%;
 	gap: 10px;
 	padding: 20px 0;
+	cursor: pointer;
 `;
 
 const BorderLine = styled.div`
