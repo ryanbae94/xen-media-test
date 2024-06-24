@@ -12,31 +12,31 @@ const List = [
 		id: 2,
 		title: 'Ultra-Rigid Bridged Die Casting',
 		description:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, tenetur magnam necessitatibus temporibus officiis, consectetur reiciendis, dolorum nobis blanditiis maxime nisi at eos quos ipsam quia.',
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, ',
 	},
 	{
 		id: 3,
 		title: 'Cable-free hub boards',
 		description:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, tenetur magnam necessitatibus temporibus officiis, consectetur reiciendis, dolorum nobis blanditiis maxime nisi at eos quos ipsam quia.',
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, ',
 	},
 	{
 		id: 4,
 		title: 'Low Power - Low Heat',
 		description:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, tenetur magnam necessitatibus temporibus officiis, consectetur reiciendis, dolorum nobis blanditiis maxime nisi at eos quos ipsam quia.',
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, ',
 	},
 	{
 		id: 5,
 		title: 'EZ Mount™ Only Installation Bracket',
 		description:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, tenetur magnam necessitatibus temporibus officiis, consectetur reiciendis, dolorum nobis blanditiis maxime nisi at eos quos ipsam quia.',
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, .',
 	},
 	{
 		id: 6,
 		title: 'Highly versatile',
 		description:
-			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint, tenetur magnam necessitatibus temporibus officiis, consectetur reiciendis, dolorum nobis blanditiis maxime nisi at eos quos ipsam quia.',
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nulla ducimus recusandae sint,',
 	},
 ];
 

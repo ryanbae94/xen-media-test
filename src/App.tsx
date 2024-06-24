@@ -82,12 +82,12 @@ const Container = styled.div`
 
 const SecondSection = styled.section`
 	width: 100%;
-	height: 863px;
 	display: flex;
 	gap: 20px;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	padding-top: 85px;
+	padding-bottom: 40px;
 	background-color: var(--color-white);
 	h1 {
 		font-weight: 700;
@@ -106,6 +106,7 @@ const SecondSection = styled.section`
 const AccordionWrapper = styled.div`
 	display: flex;
 	margin-top: 20px;
+	height: 600px;
 	gap: 40px;
 `;
 
