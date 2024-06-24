@@ -95,7 +95,7 @@ const SecondSection = styled.section`
 		letter-spacing: 0.1em;
 		color: var(--color-gray);
 	}
-	h3 {
+	h2 {
 		font-weight: 700;
 		font-size: 46px;
 		line-height: 65px;
@@ -162,7 +162,7 @@ const VideoDescription = styled.div`
 		letter-spacing: 0.1em;
 		color: var(--color-gray);
 	}
-	h3 {
+	h2 {
 		font-weight: 700;
 		font-size: 46px;
 		line-height: 65px;
@@ -215,7 +215,7 @@ function App() {
 			</ParallaxBanner>
 			<SecondSection>
 				<h1>FEATURES</h1>
-				<h3>Lower price, higher performance</h3>
+				<h2>Lower price, higher performance</h2>
 				<AccordionWrapper>
 					<StructureImage src='./images/structure.jpeg' alt='structure' />
 					<Accordion />
@@ -225,13 +225,13 @@ function App() {
 				<VideoContainer>
 					<VideoDescription>
 						<h1>INSTALLATION EXAMPLES</h1>
-						<h3>
+						<h2>
 							Pororo Theme Park
 							<br />
 							40-meter ultra-large
 							<br />
 							screen
-						</h3>
+						</h2>
 						<ul>
 							<li>Product: M4</li>
 							<li>Pixel Pitch: 2.5mm 3.0mm</li>

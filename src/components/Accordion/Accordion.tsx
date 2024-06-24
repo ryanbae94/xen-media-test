@@ -49,11 +49,17 @@ const Wrapper = styled.div`
 		font-weight: 500;
 		font-size: 16px;
 	}
-	h2 {
+	/* h2 {
 		width: 100%;
 		font-weight: 700;
 		font-size: 24px;
-	}
+	} */
+`;
+
+const Title = styled.div`
+	width: 100%;
+	font-weight: 700;
+	font-size: 24px;
 `;
 
 const ContentsWrapper = styled.div`
@@ -124,7 +130,7 @@ export default function Accordion() {
 					<div key={item.id}>
 						<ContentsWrapper onClick={() => handleToggle(item.id)}>
 							<span>{String(item.id).padStart(2, '0')}.</span>
-							<h2>{item.title}</h2>
+							<Title>{item.title}</Title>
 							<ArrowIcon isOpen={openId === item.id} />
 						</ContentsWrapper>
 						<BorderLine />
