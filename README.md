@@ -1,6 +1,7 @@
 ## Deploy Link
 
 This project is deployed on GitHub Pages using the vanilla JavaScript version.
+
 You can check the live version by clicking the link below.
 
 [Go to Link](https://ryanbae94.github.io/xen-media-test/)
