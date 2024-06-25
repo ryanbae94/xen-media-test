@@ -1,6 +1,4 @@
-## Deploy Link
-
-[Link](https://ryanbae94.github.io/xen-media-test/)
+### REACT VERSION
 
 ## Tech Stack
 
